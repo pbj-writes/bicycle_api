@@ -11,7 +11,7 @@ CREATE TABLE bicycles (
 );
 	
 
-INSERT INTO bicycle (bicycle_id, make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length)
+INSERT INTO bicycles (bicycle_id, make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length)
 VALUES
 ('1', 'Specialized', 'Sequoia Sport', 'Shimano Sora', 'aluminum', '60cm', 'silver', '2003', '175mm'),
 ('2', 'Cannondale', 'CAAD8', 'Shimano Tiagra', 'aluminum', '58cm', 'white', '2014', '172.5mm'),
