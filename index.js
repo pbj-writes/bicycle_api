@@ -38,13 +38,13 @@ app.get('/', (req,res) => {
 })
 
 app.post('/bicycles', (req, res) => {
-    const { bicycle_id, make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length } = req.body;
+    const { make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length } = req.body;
 
-    if (!bicycle_id || !make || !model) {
+    if (!make || !model) {
       return res.status(400).json({ error: 'Bicycle ID, make, and model are required' });
     }
 
-    pool.query('INSERT INTO bicycles (bicycle_id, make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)', [bicycle_id, make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length], (err, result) => {
+    pool.query('INSERT INTO bicycles (make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length], (err, result) => {
       if (err) {
         console.error('Error inserting bicycle into the database', err);
         res.status(500).json({ error: 'Internal server error' });
@@ -79,15 +79,15 @@ app.post('/bicycles', (req, res) => {
     });
   });
 
-  app.put('/bicycles/:id', (req, res) => {
-    const bicycleId = req.params.id;
-    const { bicycle_id, make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length} = req.body;
+  app.put('/bicycles/:bicycleId', (req, res) => {
+    const bicycleId = req.params.bicycleId;
+    const { make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length } = req.body;
 
-    if (!bicycle_id || !make || !model) {
-      return res.status(400).json({ error: 'Bicycle ID, make, and model are required' });
+    if (!make || !model || !groupset || !frame_type || !frame_size || !prime_color || !model_year || !crank_length) {
+      return res.status(400).json({ error: 'Make and model are required' });
     }
 
-    pool.query('UPDATE bicycles SET bicycle_id = $1, make = $2 WHERE id = $3', [bicycle_id, make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length], (err, result) => {
+    pool.query('UPDATE bicycles SET make = $1, model = $2, groupset = $3, frame_type = $4, frame_size = $5, prime_color = $6, model_year = $7, crank_length = $8 WHERE bicycle_id = $9', [make, model, groupset, frame_type, frame_size, prime_color, model_year, crank_length, bicycleId], (err, result) => {
       if (err) {
         console.error('Error updating bicycle in the database', err);
         res.status(500).json({ error: 'Internal server error' });
@@ -98,10 +98,10 @@ app.post('/bicycles', (req, res) => {
   });
 
 
-  app.delete('/bicycles/:id', (req, res) => {
-    const userId = req.params.id;
+  app.delete('/bicycles/:bicycleId', (req, res) => {
+    const bicycleId = req.params.bicycleId;
 
-    pool.query('DELETE FROM bicycles WHERE id = $1', [bicycleId], (err, result) => {
+    pool.query('DELETE FROM bicycles WHERE bicycle_id = $1', [bicycleId], (err, result) => {
       if (err) {
         console.error('Error deleting user from the database', err);
         res.status(500).json({ error: 'Internal server error' });
