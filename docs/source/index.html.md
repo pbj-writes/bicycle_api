@@ -26,49 +26,12 @@ meta:
 
 Welcome to the Bicycle Inventory API! You can use this API to access Bicycle Inventory endpoints, which can get information on all road bikes past or present in my database.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+There are language bindings in Shell, Ruby, Python, and JavaScript! You can view code example and switch the programming language of the examples.
 
 <aside class="warning">IN PROGRESS. I have not deployed my API application for testing/playing, but it is real. I'm opting to record a demo of the API application on my machine in the near term.</aside>
 
 # Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'bicycle_inventory'
-
-api = bicycle_inventory::APIClient.authorize!('bicycle_inventory_api_key')
-```
-
-```python
-import bicycle_inventory
-
-api = bicycle_inventory.authorize('bicycle_inventory_api_key')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here" \
-  -H "Authorization: bicycle_inventory_api_key"
-```
-
-```javascript
-const bicycle_inventory = require('bicycle_inventory');
-
-let api = bicycle_inventory.authorize('bicycle_inventory_api_key');
-```
-
-> Make sure to replace `bicycle_inventory_api_key` with your API key.
-
-Bicycle Inventory uses API keys to allow access to the API.
-
-Bicycle Inventory expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: bicycle_inventory_api_key`
-
-<aside class="notice">
-You must replace <code>bicycle_inventory_api_key</code> with your personal API key.
-</aside>
+Not yet required.
 
 # Bicycles
 
@@ -208,7 +171,7 @@ let max = api.bicycles.get(2);
     "prime_color": "white",
     "model_year": 2014,
     "crank_length": "172.5mm"
-},
+}
 ```
 
 This endpoint retrieves a specific bicycle.
@@ -330,7 +293,7 @@ This endpoint deletes a specific bicycle.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the bicycle to update
+bicycle_id | The ID of the bicycle to update
 
 ### Request Body Example
 ```json
@@ -393,4 +356,4 @@ This endpoint deletes a specific bicycle.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the bicycle to delete
+bicycle_id | The ID of the bicycle to delete
