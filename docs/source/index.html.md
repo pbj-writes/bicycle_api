@@ -28,6 +28,8 @@ Welcome to the Bicycle Inventory API! You can use this API to access Bicycle Inv
 
 We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
+<aside class="warning">IN PROGRESS. I have not deployed my API application for testing/playing, but it is real. I'm opting to record a demo of the API application on my machine in the near term.</aside>
+
 # Authentication
 
 > To authorize, use this code:
@@ -58,7 +60,7 @@ let api = bicycle_inventory.authorize('bicycle_inventory_api_key');
 
 > Make sure to replace `bicycle_inventory_api_key` with your API key.
 
-Bicycle Inventory uses API keys to allow access to the API. You can register a new Bicycle Inventory API key at our [developer portal](https://pbjwrites.info/developers).
+Bicycle Inventory uses API keys to allow access to the API.
 
 Bicycle Inventory expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
@@ -210,8 +212,6 @@ let max = api.bicycles.get(2);
 ```
 
 This endpoint retrieves a specific bicycle.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
