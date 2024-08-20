@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 // Create a PostgreSQL connection pool
 const pool = new Pool({
-  connectionString: 'postgres://dpckjuce:xyz@mahmud.db.elephantsql.com/dpckjuce',
+  connectionString: 'postgres://dpckjuce:ByzNT4mFBXJFD-5iaOd4KoOQvyTnLgUy@mahmud.db.elephantsql.com/dpckjuce',
 });
 
 // Test the database connection
