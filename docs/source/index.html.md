@@ -28,7 +28,10 @@ Welcome to the Bicycle Inventory API! You can use this API to access Bicycle Inv
 
 There are language bindings in Shell, Ruby, Python, and JavaScript! You can view code example and switch the programming language of the examples.
 
-<aside class="warning">IN PROGRESS. I have not deployed my API application for testing/playing, but it is real. I'm opting to record a demo of the API application on my machine in the near term.</aside>
+<aside class="warning">IN PROGRESS. I have not deployed my API application for testing/playing, but it is real. Here is a demo:
+<p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/s1RzBdgCRc0?si=UyfRadZu1ZL3rEUV&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Also, check out the <a href="https://pbjwrites.info/portfolio/bicycle_inventory_api_app/">Bicycle API App description</a>.
+</aside>
 
 # Authentication
 Not yet required.
@@ -129,63 +132,6 @@ This endpoint retrieves all bicycles.
 <aside class="success">
 Remember — you will retrieve a list of all bikes - past or present.
 </aside>
-
-## Retrieve a specific bicycle
-
-```ruby
-require 'bicycle_inventory'
-
-api = bicycle_inventory::APIClient.authorize!('bicycle_inventory_api_key')
-api.bicycles.get(2)
-```
-
-```python
-import bicycle_inventory
-
-api = bicycle_inventory.authorize('bicycle_inventory_api_key')
-api.bicycles.get(2)
-```
-
-```shell
-curl "http://pbjwrites.info/api/bicycles/2" \
-  -H "Authorization: bicycle_inventory_api_key"
-```
-
-```javascript
-const bicycle_inventory = require('bicycle_inventory');
-
-let api = bicycle_inventory.authorize('bicycle_inventory_api_key');
-let max = api.bicycles.get(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-    "bicycle_id": 2,
-    "make": "Cannondale",
-    "model": "CAAD8",
-    "groupset": "Shimano Tiagra",
-    "frame_type": "aluminum",
-    "frame_size": "58cm",
-    "prime_color": "white",
-    "model_year": 2014,
-    "crank_length": "172.5mm"
-}
-```
-
-This endpoint retrieves a specific bicycle.
-
-### HTTP Request
-
-`GET http://pbjwrites.info/bicycles/{bicycle_id}`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-bicycle_id | The ID of the bicycle. The IDs are assigned in the order the bikes were procured. So my first bike is ID=1, my second bike is ID=2, etc. 
-
 
 ## Add a new bicycle
 
