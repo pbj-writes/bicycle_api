@@ -28,7 +28,7 @@ Welcome to the Bicycle Inventory API! You can use this API to access Bicycle Inv
 
 There are language bindings in Shell, Ruby, Python, and JavaScript! You can view code example and switch the programming language of the examples.
 
-<aside class="warning">IN PROGRESS. I have not deployed my API application for testing/playing, but it is real. Here is a demo:
+<aside class="notice">IN PROGRESS. I have not deployed my API application for testing/playing, but it is real. Here is a demo:
 <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/s1RzBdgCRc0?si=UyfRadZu1ZL3rEUV&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>Also, check out the <a href="https://pbjwrites.info/portfolio/bicycle_inventory_api_app/">Bicycle API App description</a>.
 </aside>
