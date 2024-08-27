@@ -22,7 +22,9 @@ meta:
     content: Documentation for the Bicycle Inventory API
 ---
 
-# Introduction
+# Introduction 
+
+[Back to pbjwrites.info](https://pbjwrites.info)
 
 Welcome to the Bicycle Inventory API! You can use this API to access Bicycle Inventory endpoints, which can get information on all road bikes past or present in my database.
 
@@ -30,7 +32,7 @@ There are language bindings in Shell, Ruby, Python, and JavaScript! You can view
 
 <aside class="notice">I have not deployed my API application for testing/playing, but it is real. Here is a demo:
 <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/s1RzBdgCRc0?si=UyfRadZu1ZL3rEUV&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>Also, check out the <a href="https://pbjwrites.info/portfolio/bicycle_inventory_api_app/">Bicycle API App description</a>.
+<p>Also, check out the <a href="https://pbjwrites.info/portfolio/bicycle_inventory_api_app/">Bicycle Inventory API description</a>.
 </aside>
 
 # Authentication
